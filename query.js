@@ -35,9 +35,9 @@ async function sorgu(username, telegramId) {
     response = JSON.parse(response);
 
     return await check({
-        id: response.data.user.id,
-        username: response.data.user.username,
-        pic: response.data.user.profile_pic_url_hd,
+        id: response.data?.user.id,
+        username: response.data?.user.username,
+        pic: response.data?.user.profile_pic_url_hd,
         telegramId: telegramId
     });
 
