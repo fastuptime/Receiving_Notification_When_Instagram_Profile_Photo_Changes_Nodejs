@@ -52,6 +52,7 @@ bot.on('message', (msg) => {
 setInterval(async () => {
     let list = db.all();
     list.forEach(async x => {
-        await sorgu(x.data.username, x.data.telegramId);
+        let z = await sorgu(x.data.username, x.data.telegramId);
+        console.log(z);
     });
-}, 300000); // 5 dakika
+}, 1000 * 60); // 1 dakika
